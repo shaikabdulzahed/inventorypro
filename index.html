@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <span class="logo-icon">📦</span>
+        <span>InventoryPro</span>
+      </div>
+      
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item active">
+            <a href="#" class="nav-link">
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span>Inventory</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span>Reports</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span>Resources</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span>Returns & Damaged</span>
+              <span class="premium-badge">Premium</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="admin-section">
+        <span class="admin-title">ADMINISTRATORS</span>
+        <div class="admin-list">
+          <div class="admin-item">
+            <div class="admin-avatar">SA</div>
+            <div>
+              <div>Syed Aiman Osman</div>
+              <div class="admin-role">Primary Admin</div>
+            </div>
+          </div>
+          <div class="admin-item">
+            <div class="admin-avatar">AA</div>
+            <div>
+              <div>Ashraf Ali</div>
+              <div class="admin-role">Admin</div>
+            </div>
+          </div>
+          <div class="admin-item">
+            <div class="admin-avatar">AB</div>
+            <div>
+              <div>Abdul Bari</div>
+              <div class="admin-role">Admin</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="header">
+        <h2>Dashboard</h2>
+        <input type="text" placeholder="Search..." class="search-bar">
+      </header>
+      
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Inventory Management System</h1>
+          <p>Effortlessly manage your Inventory with our Intuitive System, optimizing stock levels and boosting profitability.</p>
+          <div class="btn-group">
+            <button class="btn btn-white">Learn More</button>
+            <button class="btn btn-outline">Get Started</button>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Metrics Section -->
+      <section class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-header">
+            <h3>Total Inventory</h3>
+            <span>📊</span>
+          </div>
+          <div class="metric-value">527</div>
+          <div class="metric-change change-positive">+12% from last month</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-header">
+            <h3>Inventory Value</h3>
+            <span>💰</span>
+          </div>
+          <div class="metric-value">₹1,02,783</div>
+          <div class="metric-change change-positive">+7.8% from last month</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-header">
+            <h3>Low Stock Items</h3>
+            <span>⚠️</span>
+          </div>
+          <div class="metric-value">12</div>
+          <div class="metric-change change-negative">+5.2% from last month</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-header">
+            <h3>Out of Stock</h3>
+            <span>❌</span>
+          </div>
+          <div class="metric-value">3</div>
+          <div class="metric-change change-positive">-2 from last month</div>
+        </div>
+      </section>
+      
+      <!-- Inventory Table -->
+      <section class="items-container">
+        <div class="table-header">
+          <h3>Inventory Items</h3>
+          <div class="table-filters">
+            <select class="filter-select">
+              <option>All Categories</option>
+              <option>Electronics</option>
+              <option>Furniture</option>
+              <option>Office Supplies</option>
+            </select>
+            <select class="filter-select">
+              <option>Sort by Name (A-Z)</option>
+              <option>Sort by Price (Low-High)</option>
+              <option>Sort by Stock (Low-High)</option>
+            </select>
+          </div>
+        </div>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Item Name</th>
+              <th>Category</th>
+              <th>SKU</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody id="inventory-table-body">
+            <!-- Table rows will be populated by JavaScript -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
